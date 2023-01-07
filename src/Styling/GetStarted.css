@@ -1,0 +1,17 @@
+/* GET STARTED SECTION */
+
+body{
+    /* background-color: rgb(232, 232, 232); */
+    background-color: rgb(231, 231, 231);
+    padding: 3vw;
+}
+
+#getStarted{
+    background-color: white;
+    display: flex;
+    border-radius: 0.2em;
+    position: sticky;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+

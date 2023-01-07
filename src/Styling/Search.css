@@ -1,0 +1,78 @@
+#search{
+    margin: 0em 2em;
+    padding: 2em 0em;
+    top: 0;
+    position: sticky;
+    border-bottom: 0.15em solid rgb(232, 232, 232);
+    background-color: white;
+}
+
+
+/* SEARCH BUTTON */
+
+.searchBtn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid rgb(238, 238, 238);
+    border-radius: 1.5em;
+    width: 20em;
+    height: 2.4em;
+    padding: 0em 1em;
+    background-color: white;
+}
+
+#searchHidden{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 2em;
+    font-size: 1em;
+    width: 17.5em;
+    padding: 0em 0.5em;
+    border: none;
+    outline: none;
+}
+
+.searchIcon{
+    color: grey;
+}
+
+
+/* ICONS */
+
+.fa-bell, .fa-bookmark{
+    transform: scale(1.2);
+    /* margin: 0em 0.7em; */
+    border-radius: 50%;
+    width: fit-content;
+    cursor: pointer;
+    background-color: rgb(234, 234, 234);
+    color: black;
+}
+  
+.fa-bell{
+    padding: 0.5em 0.6em;
+    margin-right: 0.7em;
+}
+
+.fa-bookmark{
+    padding: 0.5em 0.65em;
+    margin-left: 0.7em;
+}
+  
+.fa-bell:hover, .fa-bookmark:hover{
+    color: white;
+    background-color: black;
+}
+
+
+/* UTILITIES */
+
+.justifyBetween{
+    display: flex;
+    justify-content: space-between;
+}
+
+.alignCenter{
+    display: flex;
+    align-items: center;
+}

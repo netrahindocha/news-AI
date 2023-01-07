@@ -1,0 +1,55 @@
+/* SIDENAV SECTION */
+
+#sideNav{
+    position: sticky;
+    top: 0px;
+    width: 10%;
+    height: 93vh;
+    border-radius: 2em;
+}
+
+
+/* LOGO SECTION */
+
+#logo i{
+    transform: scale(1.6);
+    margin-top: 3em;
+}
+
+#title{
+    font-size: 1.4em;
+    font-weight: 500;
+    padding-top: 0.3em;
+    margin: 0;
+}
+
+
+/* NAVLIST SECTION */
+
+.navList{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4em;
+}
+
+.navList a{
+    text-decoration: none;
+    color: black;
+    padding: 0.5em 1.8em;
+    margin: 0.1em 0.1em;
+    /* border-left: 0.4em solid rgb(113, 113, 113); */
+    border-left: 5px solid transparent;
+    padding-left: 1em;
+    text-align: center;
+}
+
+.navList a:hover{
+    border-left: 5px solid rgb(81, 81, 81);
+    background-color: rgb(232, 232, 232);
+}
+
+.active{
+    /* background-color: rgb(206, 206, 206); */
+    border-left: 5px solid rgb(81, 81, 81) !important;
+    background-color: rgb(232, 232, 232);
+}
