@@ -28,13 +28,6 @@ const Features = () => {
         <a href="/technology" className='activeState'>Technology</a>
       </div> */}
 
-      {/* <div className="markedArticles">
-        <h3>Starred Articles</h3>
-        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auhref=format&fit=crop&w=1170&q=80" alt="" />
-        <div className="topic">Why You Need AI Robot For Your Office and How It Works?</div>
-        <div className="topicContent">Let's learn about how to discuss about robot and future work.</div>
-        <button>Read Articles</button>
-      </div> */}
 
       <div className="connectUs">
         <div className="gift">
@@ -42,6 +35,13 @@ const Features = () => {
         </div>
         <p>Wanna add more features? Become a Premium Member</p>
         <button>Upgrade</button>
+      </div>
+
+      <div className="markedArticles">
+        
+        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auhref=format&fit=crop&w=1170&q=80" alt="" />
+        <div className="topic">Why You Need AI Robot For Your Office and How It Works?</div>
+        <button>Starred Articles</button>
       </div>
 
     </div>
