@@ -1,9 +1,9 @@
 #search{
-    margin: 0em 2em;
-    padding: 2em 0em;
+    margin: 0vw 2vw;
+    padding: 2vw 0vw;
     top: 0;
     position: sticky;
-    border-bottom: 0.15em solid rgb(232, 232, 232);
+    border-bottom: 0.17vw solid rgb(232, 232, 232);
     background-color: white;
 }
 
@@ -14,35 +14,41 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 2px solid rgb(238, 238, 238);
-    border-radius: 1.5em;
-    width: 20em;
-    height: 2.4em;
-    padding: 0em 1em;
+    border: 0.16vw solid rgb(238, 238, 238);
+    border-radius: 1.5vw;
+    width: 20vw;
+    height: 2.4vw;
+    padding: 0vw 1vw;
     background-color: white;
 }
 
 #searchHidden{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    height: 2em;
-    font-size: 1em;
-    width: 17.5em;
-    padding: 0em 0.5em;
+    height: 2vw;
+    font-size: 1vw;
+    width: 17.5vw;
+    padding: 0vw 0.5vw;
     border: none;
     outline: none;
 }
 
 .searchIcon{
     color: grey;
+    font-size: 1vw;
 }
 
 
 /* ICONS */
 
+.actions{
+    display: flex;
+    align-items: center;
+}
+
 .fa-bell, .fa-bookmark{
-    transform: scale(1.2);
-    /* margin: 0em 0.7em; */
-    border-radius: 50%;
+    /* transform: scale(1.2); */
+    font-size: 1.2vw;
+    border-radius: 50vw;
     width: fit-content;
     cursor: pointer;
     background-color: rgb(234, 234, 234);
@@ -50,13 +56,13 @@
 }
   
 .fa-bell{
-    padding: 0.5em 0.6em;
-    margin-right: 0.7em;
+    padding: 0.8vw 0.9vw;
+    margin-right: 0.7vw;
 }
 
 .fa-bookmark{
-    padding: 0.5em 0.65em;
-    margin-left: 0.7em;
+    padding: 0.8vw 0.95vw;
+    margin-left: 0.7vw;
 }
   
 .fa-bell:hover, .fa-bookmark:hover{

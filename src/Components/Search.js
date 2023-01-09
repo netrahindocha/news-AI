@@ -4,7 +4,6 @@ import "../Styling/Search.css";
 const Search = () => {
   return (
     <div id="search">
-      <div id="searchContainer">
       <div className="justifyBetween alignCenter">
         <div className="searchBtn flexRow">
           <input type="searchHidden" name="searchHidden" id="searchHidden" placeholder="Search article you want" />
@@ -16,7 +15,6 @@ const Search = () => {
         </div>
       </div>
       </div>
-    </div>
   )
 }
 
