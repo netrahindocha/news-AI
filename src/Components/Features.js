@@ -17,27 +17,15 @@ const Features = () => {
 
       </div>
 
-      {/* <div className="otherTopic">
-        <h3>More Interesting Topics</h3>
-        <a href="/business">Business</a>
-        <a href="/entertainment">Entertainment</a>
-        <a href="/general">General</a>
-        <a href="/health">Health</a>
-        <a href="/science">Science</a>
-        <a href="/sports">Sports</a>
-        <a href="/technology" className='activeState'>Technology</a>
-      </div> */}
-
-
-      <div className="connectUs">
+      <div className="premium">
         <div className="gift">
           <img src="https://cdn3d.iconscout.com/3d/premium/thumb/premium-black-matte-and-gold-gift-box-4816106-4014635@0.png?w=0&h=700&f=png" alt="" />
         </div>
         <p>Wanna add more features? Become a Premium Member</p>
-        <button>Upgrade</button>
+        <button className='upgrade'>Upgrade</button>
       </div>
 
-      <div className="markedArticles">
+      <div className="starredArticles">
         
         <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auhref=format&fit=crop&w=1170&q=80" alt="" />
         <div className="topic">Why You Need AI Robot For Your Office and How It Works?</div>

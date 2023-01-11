@@ -1,25 +1,27 @@
 /* SIDENAV SECTION */
 
 #sideNav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: sticky;
-    top: 0px;
-    width: 10%;
+    top: 0;
+    width: 10vw;
     height: 93vh;
-    border-radius: 2em;
+    border-radius: 2vw;
 }
-
 
 /* LOGO SECTION */
 
 #logo i{
-    transform: scale(1.6);
-    margin-top: 3em;
+    font-size: 1.9vw;
+    margin-top: 2vw;
 }
 
 #title{
-    font-size: 1.4em;
+    font-size: 1.5vw;
     font-weight: 500;
-    padding-top: 0.3em;
+    padding-top: 0.5vw;
     margin: 0;
 }
 
@@ -29,27 +31,52 @@
 .navList{
     display: flex;
     flex-direction: column;
-    margin-top: 4em;
+    margin-top: 4vw;
 }
 
 .navList a{
     text-decoration: none;
     color: black;
-    padding: 0.5em 1.8em;
-    margin: 0.1em 0.1em;
-    /* border-left: 0.4em solid rgb(113, 113, 113); */
-    border-left: 5px solid transparent;
-    padding-left: 1em;
+    padding: 0.5vw 1.8vw;
+    margin: 0.3vw 0.1vw;
+    border-left: 0.4vw solid transparent;
+    padding-left: 1vw;
     text-align: center;
+    font-size: 1em;
 }
 
 .navList a:hover{
-    border-left: 5px solid rgb(81, 81, 81);
+    border-left: 0.4vw solid rgb(81, 81, 81);
     background-color: rgb(232, 232, 232);
 }
 
 .active{
-    /* background-color: rgb(206, 206, 206); */
-    border-left: 5px solid rgb(81, 81, 81) !important;
+    border-left: 0.4vw solid rgb(81, 81, 81) !important;
     background-color: rgb(232, 232, 232);
+}
+
+
+/* BOTTOM PART SECTION */
+
+.bottomPart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.3vw;
+    margin-bottom: 1.5vw;
+}
+
+.settings, .logout{
+    margin: 0.75vw 0vw;
+    width: fit-content;
+    padding: 0.5vw 0.75vw;
+    border-radius: 50vw;
+    cursor: pointer;
+    background-color: rgb(234, 234, 234);
+    color: black;
+}
+
+.settings:hover, .logout:hover{
+    background-color: black;
+    color: white;
 }
