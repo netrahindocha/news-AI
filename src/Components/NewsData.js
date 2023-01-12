@@ -1,13 +1,96 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import NewsCard from './NewsCard';
 import "../Styling/NewsData.css";
 
-const NewsData = () => {
+const NewsData = (props) => {
+
+    const [articles, setArticles] = useState([]);
+
+    const updateNews = async () => {
+        const url = "https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=48753e7eee184f03b80ebfddb963ecf2&page=1&pageSize=20";
+        let data = await fetch(url);
+        let parsedData = await data.json();
+        setArticles(articles.concat(parsedData.articles));
+    }
+
+    useEffect(() => {
+        updateNews();
+    }, [])
+
   return (
-    <div id="newsData">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dignissimos molestias, autem alias aut expedita voluptatibus aliquid hic dolor, ut minima? Odit fuga veritatis omnis, hic ut exercitationem perferendis aspernatur vero, dolor tenetur nulla dolores possimus expedita a laboriosam aperiam dicta. Cum vitae, enim corporis quibusdam porro ipsam dicta nostrum, explicabo nesciunt nulla soluta sit rerum! Odio placeat eveniet natus ipsam itaque reprehenderit, cupiditate laborum dolor adipisci amet mollitia veniam praesentium incidunt reiciendis maiores repellendus ad voluptatum qui, modi expedita! Dolorem veniam beatae temporibus, similique magnam laudantium maxime saepe cumque ut sed dignissimos nesciunt omnis minima deserunt, dolorum obcaecati ipsa! Explicabo necessitatibus, deserunt facilis iste earum nisi voluptate ad pariatur nulla. Commodi iure, sit sint consequuntur a nulla itaque consequatur? Cumque sunt molestias, consequatur modi soluta facilis at eaque sequi adipisci voluptates corrupti. Ducimus, molestias. Iste architecto inventore dolorem provident odit assumenda nostrum repellat odio reprehenderit molestias commodi at repellendus eos ad distinctio, aliquam nam! Error minima sed nulla exercitationem doloribus esse maiores omnis sequi corporis iste repellat, aliquid fugiat harum temporibus, totam et suscipit non voluptatem cumque vero. Aspernatur placeat esse iusto non, maiores beatae! Ea saepe id rem atque, libero iure quisquam laborum doloremque reprehenderit. Repellat sapiente reprehenderit consequuntur natus in, praesentium omnis officiis voluptatibus, quae reiciendis illo. Quia nisi asperiores commodi, velit veritatis fuga reprehenderit repellat blanditiis, magni et exercitationem repudiandae totam est distinctio, obcaecati nihil facere id minus sapiente voluptate perferendis officiis? Reprehenderit, ab cupiditate blanditiis sapiente iusto ullam, neque quae aliquid sunt molestias assumenda fugit rem, facere consequuntur. Molestias dignissimos, veritatis perferendis esse maiores cupiditate culpa quaerat quia. Dolore tenetur tempora repellat quod fuga corporis enim qui. Inventore quasi illo vero iste cupiditate fuga. Corrupti, cum. Quis aut amet numquam earum modi libero assumenda, laudantium commodi. Beatae voluptatibus quas similique magni amet hic incidunt adipisci in voluptatem nostrum voluptate delectus ducimus numquam praesentium voluptates maxime ipsum, cum mollitia dolor reiciendis. Sint iusto pariatur recusandae ut minus ullam unde nisi, in optio doloribus corporis culpa aliquam itaque neque eius animi, rem eaque? Quis veritatis laborum impedit. Explicabo quod delectus aliquam iusto voluptatibus et sint rerum a eos laboriosam quam nisi nam facere dolorem atque qui omnis nobis, est odit tempora aliquid nulla doloremque. Nobis debitis alias quam voluptas id cupiditate dolorum repellat, accusamus deleniti aut quibusdam consequatur, perferendis eos exercitationem animi reprehenderit rem veritatis earum iste quaerat vero voluptate eaque dicta excepturi? Vitae tempora vel quam, delectus alias quos sint, perferendis laborum modi deserunt facere in rerum placeat explicabo temporibus est eveniet quibusdam amet sapiente expedita minus nostrum? Exercitationem, recusandae cupiditate minima rerum temporibus obcaecati eligendi animi est repellendus totam, cumque sapiente quia optio vitae mollitia possimus architecto id. Officiis minus eligendi nihil ratione minima, iusto adipisci qui aperiam mollitia, et nostrum voluptatem itaque velit dolorem laborum temporibus similique natus numquam ab placeat modi dicta. Blanditiis dolores et cupiditate sequi. Quam corporis neque numquam voluptas maiores reiciendis pariatur suscipit doloribus ut hic asperiores vero facere quo natus, voluptates incidunt qui? Ipsam sit quis saepe rem quas?
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et ad ipsa molestiae magni. Fugit suscipit recusandae provident natus omnis dicta dolore illum eos voluptatibus magnam quasi at sint placeat, est mollitia eius facere quaerat quas asperiores odit quisquam doloribus atque consequatur quidem? Explicabo veritatis iste unde soluta odio, vero cumque vitae impedit iure quia. Vel expedita recusandae pariatur. Ab autem voluptas debitis aliquam reiciendis beatae amet laborum laudantium doloribus porro quod quidem animi quam recusandae, minima quaerat quia qui provident officiis voluptates inventore fugit alias aliquid. Nesciunt odio eaque sint consequatur quasi quas repellendus? Possimus vel doloremque fugiat consequatur necessitatibus blanditiis, quo totam deleniti modi mollitia reprehenderit dolorum non qui laborum id eius nostrum libero voluptatem quae voluptates tenetur. Officiis quae assumenda vitae repudiandae provident ut sapiente, beatae voluptas aspernatur, obcaecati quos non explicabo voluptates ipsam mollitia? Sapiente soluta necessitatibus magni distinctio quisquam iste quos eveniet id facere minus aut, perferendis obcaecati. Impedit tempore eveniet nostrum distinctio sint quis quaerat modi commodi at nam, mollitia, ipsum laboriosam. Architecto eum officiis quasi optio reiciendis veniam praesentium debitis aliquid, officia commodi neque blanditiis adipisci esse. Earum, nihil. Fuga modi officiis commodi atque impedit, nihil a. Voluptates, impedit sequi fuga minus veniam temporibus!
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi, accusantium odit. Dolor nam dolorem, minima vel, corrupti optio, consequuntur soluta fugit placeat id exercitationem itaque maxime nesciunt tenetur ducimus repellat non sint. Officia deleniti, quidem sequi optio eveniet unde doloribus veritatis commodi quam totam asperiores nostrum molestiae culpa excepturi voluptates vero nisi accusantium, iste, rem esse expedita in soluta. In voluptatum doloremque quaerat consequuntur ea, accusantium unde, facere dignissimos voluptates debitis quas eaque dolorum rerum doloribus mollitia? Tenetur reprehenderit soluta quam ipsam, et, esse reiciendis quasi aut est fuga minima, quos doloremque exercitationem culpa iure magni nisi sit nostrum consequuntur ducimus? Incidunt corporis, non fugiat ea fugit odio iusto maxime, rerum ut explicabo eaque eius nostrum. Repellat ad aperiam quia accusamus neque totam! Sint sed quas, impedit, molestias dolor distinctio aliquid minus saepe dolorum perferendis libero ut exercitationem fuga nam, ea facere quasi quo ad! Neque animi corrupti dolores aperiam fugiat voluptate minus placeat, ea deserunt aliquam dignissimos molestiae optio perferendis tempore sed obcaecati molestias, quidem totam magnam sunt enim libero sapiente! Incidunt at, beatae blanditiis quidem nemo dignissimos cupiditate sequi iure exercitationem temporibus distinctio pariatur numquam laudantium esse veniam quo excepturi ipsum vel autem debitis eius quaerat! Earum, voluptatum!
-      </div>
+    
+    <div id='newsData'>
+
+            <div className="headlines">
+                <p>Top Headlines of the Day</p>
+                <select name="country" id="country" className="minimal">
+                    <option value="Argentina" id="ar">Argentina</option>
+                    <option value="Austria" id="at">Austria</option>
+                    <option value="Australia" id="au">Australia</option>
+                    <option value="Belgium" id="be">Belgium</option>
+                    <option value="Brazil" id="br">Brazil</option>
+                    <option value="Bulgaria" id="bg">Bulgaria</option>
+                    <option value="Canada" id="ca">Canada</option>
+                    <option value="China" id="cn">China</option>
+                    <option value="Colombia" id="co">Colombia</option>
+                    <option value="Cuba" id="cu">Cuba</option>
+                    <option value="Czechia" id="cz">Czechia</option>
+                    <option value="Egypt" id="eg">Egypt</option>
+                    <option value="France" id="fr">France</option>
+                    <option value="Germany" id="de">Germany</option>
+                    <option value="Greece" id="gr">Greece</option>
+                    <option value="Hong Kong" id="hk">Hong Kong</option>
+                    <option value="Hungary" id="hu">Hungary</option>
+                    <option value="India" id="in">India</option>
+                    <option value="Indonesia" id="id">Indonesia</option>
+                    <option value="Ireland" id="ie">Ireland</option>
+                    <option value="Israel" id="il">Israel</option>
+                    <option value="Italy" id="it">Italy</option>
+                    <option value="Japan" id="jp">Japan</option>
+                    <option value="Korea" id="kr">Korea</option>
+                    <option value="Latvia" id="lv">Latvia</option>
+                    <option value="Lithuania" id="lt">Lithuania</option>
+                    <option value="Malaysia" id="my">Malaysia</option>
+                    <option value="Mexico" id="mx">Mexico</option>
+                    <option value="Morocco" id="ma">Morocco</option>
+                    <option value="Netherlands" id="nl">Netherlands</option>
+                    <option value="New Zealand" id="nz">New Zealand</option>
+                    <option value="Nigeria" id="ng">Nigeria</option>
+                    <option value="Norway" id="no">Norway</option>
+                    <option value="Philippines" id="ph">Philippines</option>
+                    <option value="Poland" id="pl">Poland</option>
+                    <option value="Portugal" id="pt">Portugal</option>
+                    <option value="Romania" id="ro">Romania</option>
+                    <option value="Russia" id="ru">Russia</option>
+                    <option value="Saudi Arabia" id="sa">Saudi Arabia</option>
+                    <option value="Serbia" id="rs">Serbia</option>
+                    <option value="Singapore" id="sg">Singapore</option>
+                    <option value="Slovakia" id="sk">Slovakia</option>
+                    <option value="Slovenia" id="si">Slovenia</option>
+                    <option value="South Africa" id="za">South Africa</option>
+                    <option value="Sweden" id="se">Sweden</option>
+                    <option value="Switzerland" id="ch">Switzerland</option>
+                    <option value="Taiwan" id="tw">Taiwan</option>
+                    <option value="Thailand" id="th">Thailand</option>
+                    <option value="Turkey" id="tr">Turkey</option>
+                    <option value="Ukraine" id="ua">Ukraine</option>
+                    <option value="United Arab Emirates" id="ae">Arab Emirates</option>
+                    <option value="United Kingdom" id="gb">United Kingdom</option>
+                    <option value="United States of America" id="us">United States of America</option>
+                    <option value="Venezuela" id="ve">Venezuela</option>
+                </select>
+            </div>
+
+            <div id="fetchData">
+            {articles.map((element) => {
+                
+                return <NewsCard title={element.title} description={element.description} url={element.url} urlToImage={element.urlToImage} />
+
+            })}
+            </div>
+
+        </div>
+
   )
 }
 

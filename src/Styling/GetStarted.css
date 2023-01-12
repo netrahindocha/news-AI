@@ -9,9 +9,7 @@ body{
 #getStarted{
     background-color: white;
     display: flex;
-    border-radius: 0.2em;
+    border-radius: 0.2vw;
     position: sticky;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-
-
