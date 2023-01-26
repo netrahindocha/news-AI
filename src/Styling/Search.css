@@ -71,6 +71,7 @@
 /* NEWS CATEGORY SECTION */
 
 .newsCategory{
+    text-align: center;
     margin-top: 2vw;
     padding-top: 2vw;
     position: sticky;

@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "../Styling/Search.css";
 
 const Search = () => {
+
   return (
     <>
     <div id="search">
@@ -16,13 +18,13 @@ const Search = () => {
         </div>
       </div>
       <div className="newsCategory">
-        <a href="/business" className="activeCategory">Business</a>
-        <a href="/entertainment">Entertainment</a>
-        <a href="/general">General</a>
-        <a href="/health">Health</a>
-        <a href="/science">Science</a>
-        <a href="/sports">Sports</a>
-        <a href="/technology">Technology</a>
+        <Link to="/business" className="activeCategory">Business</Link>
+        <Link to="/entertainment">Entertainment</Link>
+        <Link to="/general">General</Link>
+        <Link to="/health">Health</Link>
+        <Link to="/science">Science</Link>
+        <Link to="/sports">Sports</Link>
+        <Link to="/technology">Technology</Link>
       </div>
       </div>
       </>

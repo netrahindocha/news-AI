@@ -7,7 +7,7 @@ const SideNav = () => {
 
             <div>
                 <div id="logo">
-                    <i class="fa-solid fa-robot"></i>
+                    <i className="fa-solid fa-robot"></i>
                     <p id='title'>NewsAI</p>
                 </div>
 

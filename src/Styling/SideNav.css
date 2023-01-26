@@ -16,9 +16,12 @@
 #logo i{
     font-size: 1.9vw;
     margin-top: 2vw;
+    text-align: center;
+    width: 100%;
 }
 
 #title{
+    text-align: center;
     font-size: 1.5vw;
     font-weight: 500;
     padding-top: 0.5vw;

@@ -7,7 +7,7 @@ const NewsData = (props) => {
     const [articles, setArticles] = useState([]);
 
     const updateNews = async () => {
-        const url = "https://newsapi.org/v2/top-headlines?country=ca&category=general&apiKey=48753e7eee184f03b80ebfddb963ecf2&page=1&pageSize=20";
+        const url = `https://newsapi.org/v2/top-headlines?country=in&category=${props.category}&apiKey=48753e7eee184f03b80ebfddb963ecf2&page=1&pageSize=20`;
         let data = await fetch(url);
         let parsedData = await data.json();
         setArticles(articles.concat(parsedData.articles));
@@ -84,7 +84,7 @@ const NewsData = (props) => {
             <div id="fetchData">
             {articles.map((element) => {
                 
-                return <NewsCard title={element.title} description={element.description} url={element.url} urlToImage={element.urlToImage} />
+                return <NewsCard key={element.url} title={element.title} description={element.description} url={element.url} urlToImage={element.urlToImage} />
 
             })}
             </div>
