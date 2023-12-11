@@ -1,15 +1,47 @@
 import React, { useState, useEffect } from 'react';
 import NewsCard from './NewsCard';
 import "../Styling/NewsData.css";
+import businessData from "../Responses/business.json";
+import entertainmentData from "../Responses/entertainment.json";
+import generalData from "../Responses/general.json";
+import healthData from "../Responses/health.json";
+import scienceData from "../Responses/science.json";
+import sportsData from "../Responses/sports.json";
+import technologyData from "../Responses/technology.json";
+
 
 const NewsData = (props) => {
 
     const [articles, setArticles] = useState([]);
 
     const updateNews = async () => {
-        const url = `https://newsapi.org/v2/top-headlines?country=in&category=${props.category}&apiKey=48753e7eee184f03b80ebfddb963ecf2&page=1&pageSize=20`;
-        let data = await fetch(url);
-        let parsedData = await data.json();
+        let parsedData;
+        switch(props.category) {
+            case "business":
+                parsedData = businessData;
+                break;
+            case "entertainment":
+                parsedData = entertainmentData;
+                break;
+            case "general":
+                parsedData = generalData;
+                break;
+            case "health":
+                parsedData = healthData;
+                break;
+            case "science":
+                parsedData = scienceData;
+                break;
+            case "sports":
+                parsedData = sportsData;
+                break;
+            case "technology":
+                parsedData = technologyData;
+                break;
+            default:
+                parsedData = generalData;
+                break;
+        }
         setArticles(articles.concat(parsedData.articles));
     }
 
