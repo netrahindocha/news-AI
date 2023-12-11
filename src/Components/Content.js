@@ -13,6 +13,7 @@ const Content = () => {
       <Search/>
       <Routes>
         <Route exact path="/" element={<NewsData category="general" key="default" />}/>
+        <Route exact path="/news-AI" element={<NewsData category="general" key="default" />}/>
         <Route exact path="/business" element={<NewsData category="business" key="business"/>}/>
         <Route exact path="/entertainment" key="entertainment" element={<NewsData category="entertainment" key="entertainment" />}/>
         <Route exact path="/general" element={<NewsData category="general" key="general" />}/>
